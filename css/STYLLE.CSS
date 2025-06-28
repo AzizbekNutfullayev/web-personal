@@ -1,0 +1,418 @@
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fdfdfd;
+  color: #111;
+}
+
+/* === HEADER === */
+.father-conteyner {
+  width: 100%;
+  background: linear-gradient(90deg, #a2afcc, #353f53);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.conteyner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.logo h1 {
+  font-size: 24px;
+  margin-left: 10px;
+}
+.nav-links-desktop {
+  display: flex;
+  gap: 25px;
+}
+.nav-links-desktop a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.nav-links-desktop a:hover {
+  color: #00d8ff;
+  transform: scale(1.1);
+}
+
+/* === HAMBURGER MENU === */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.overlay.show {
+  display: flex;
+}
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.overlay-content a {
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.overlay-content a:hover {
+  color: #00bcd4;
+  transform: scale(1.1);
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* === SECTION STYLING === */
+section {
+  padding: 120px 20px 60px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === HOME === */
+#home {
+  background: linear-gradient(to right, #486c8e, #424946);
+  text-align: center;
+  color: white;
+}
+
+.Home-page h1 {
+  font-size: 2.8rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 30%;
+}
+.highlight {
+  color: #ffe600;
+}
+.button-card {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.button-card a {
+  background: #111;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.button-card a:hover {
+  background: #00d8ff;
+  transform: scale(1.2);
+}
+
+/* === ABOUT === */
+#about {
+  background: linear-gradient(135deg, #616b79, #f0f4f8);
+}
+.about-h1{
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #fff;
+  margin-top: 100px;
+}
+.containerp-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.ing-page img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.ing-page img:hover {
+  transform: scale(1.05);
+}
+
+.about-page {
+  max-width: 600px;
+  color: #2c3e50;
+}
+
+.about-page h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.about-page h3 {
+  font-size: 18px;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.about-page p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Mobil uchun responsive */
+@media (max-width: 768px) {
+  .containerp-about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-page h2 {
+    font-size: 28px;
+  }
+
+  .about-page h3 {
+    font-size: 16px;
+  }
+
+  .about-page p {
+    font-size: 15px;
+  }
+
+  .ing-page img {
+    width: 80%;
+  }
+}
+
+
+
+
+/* === SKILLS === */
+#skills {
+  background: linear-gradient(90deg, #868a92, #869bc6);
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.skills-h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+  margin-bottom: 150px;
+margin-top: 50px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.skil-front {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  transition: transform 0.5s;
+}
+
+.skil-front:hover {
+  transform: scale(1.05);
+}
+
+.skil-front h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.skill-cards button {
+  padding: 10px 20px;
+  background: #00bcd4;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.skill-cards button:hover {
+  background: #0097a7;
+}
+
+.skills-img img {
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .skill-cards {
+    flex-direction: column;
+  }
+
+  .skills-img img {
+    width: 90%;
+  }
+}
+
+/* === WORK === */
+#work {
+  background: linear-gradient(90deg, #263452, #b9bdc5);
+}
+
+.work-h1{
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #fff;
+  margin-top: 50px;
+}
+.work-cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.game-card {
+  background: #2c3e50;
+  color: white;
+  width: 280px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.game-card  h2{
+  text-align: center;
+}
+.game-card:hover {
+  transform: scale(1.05);
+}
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.game-card h2 {
+  padding: 15px 0;
+}
+
+/* === FOOTER === */
+footer {
+  background: #182848;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footer-icons {
+  margin-top: 10px;
+}
+.footer-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.footer-icons a:hover {
+  color: #00d8ff;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav-links-desktop {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .skills-container,
+  .containerp-about {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azizbek One Page Site</title>
+    <link rel="stylesheet" href="/css/STYLLE.CSS" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+    <div class="father-conteyner">
+        <div class="conteyner">
+            <div class="logo">
+                <img src="/img/photo_2025-04-04_18-32-10.jpg" alt="logo">
+                <h1>Azizbek</h1>
+            </div>
+            <div class="nav-links-desktop">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#work">Work</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Menu for Mobile -->
+    <div class="overlay" id="fullscreenMenu">
+        <span class="close-btn" onclick="toggleMenu()">✕</span>
+        <div class="overlay-content">
+            <a href="#home" onclick="toggleMenu()">Home</a>
+            <a href="#about" onclick="toggleMenu()">About</a>
+            <a href="#skills" onclick="toggleMenu()">Skills</a>
+            <a href="#work" onclick="toggleMenu()">Work</a>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container-home">
+            <div class="Home-page">
+                <h1>
+                    Hi, My name is <span class="highlight">Nutfullayev Azizbek</span><br>
+                    I'm a <span class="typewriter">Frontend and Full Stack Developer</span>
+                </h1>
+            </div>
+            <div class="button-card">
+                <a href="https://github.com/AzizbekNutfullayev" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://t.me/nutfulllaev" target="_blank"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1 class="about-h1">About</h1>
+        <div class="containerp-about">
+            <div class="ing-page">
+              <img src="/img/image.png" alt="azizbek photo">
+            </div>
+            <div class="about-page">
+              <h2>I am Nutfullayev Azizbek</h2>
+              <h3>Frontend and Full Stack Developer</h3>
+              <p>
+                Hi, I am 19 years old and study at PDP University in Tashkent.
+                Since childhood, I have been passionate about IT and constantly strive to grow.
+                I'm great in both team and solo environments. I love learning and using new technologies.
+                My goal is to work on global projects and grow as a developer.
+              </p>
+            </div>
+          </div>
+          
+    </section>
+
+    <!-- Skills and Work Section -->
+    <section id="skills">
+        <h1 class="skills-h1">Skills</h1>
+        <div class="skills-container">
+          <div class="skill-cards">
+            <div class="skil-front">
+              <h1>Frontend</h1>
+              <div class="button-row">
+                <button>React</button>
+                <button>Bootstrap</button>
+                <button>Redux Toolkit</button>
+                <button>Node.js</button>
+              </div>
+      
+              <h1>Backend</h1>
+              <div class="button-row">
+                <button>PostgreSQL</button>
+                <button>Node.js</button>
+                <button>CI/CD</button>
+              </div>
+            </div>
+      
+            <div class="skills-img">
+              <img src="/img/images (1).jpg" alt="Skills Image" />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+    <section id="work">
+        <h1 class="work-h1">My works</h1>
+
+        <div class="work-cards">
+            <div class="game-card" onclick="goToPage('https://thunderous-scone-62342a.netlify.app')">
+                <img src="/img/Quiz.webp" alt="Game Cover" class="card-img" />
+                <h2>Play Game</h2>
+            </div>
+            <div class="game-card" onclick="goToPage('https://front1-nm9i.onrender.com')">
+                <img src="/img/images.jpg" alt="Game Cover" class="card-img" />
+                <h2>Add Book</h2>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p> Azizbek Nutfullayev</p>
+            <div class="footer-icons">
+                <a href="https://github.com/AzizbekNutfullayev" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://t.me/nutfulllaev" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>I'm Abdullo Karimov and this is my personal website ✨</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("fullscreenMenu");
+            menu.classList.toggle("show");
+        }
+
+        function goToPage(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+
+</html>
